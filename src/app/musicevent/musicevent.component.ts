@@ -7,6 +7,7 @@ import { MusicEvent } from '../MusicEvent';
   styleUrls: ['./musicevent.component.sass']
 })
 export class MusiceventComponent implements OnInit {
+  currency = 'EUR';
   @Input() event: MusicEvent;
   @Output() clickevent: EventEmitter<string> = new EventEmitter();
 

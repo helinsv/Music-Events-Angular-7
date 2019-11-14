@@ -7,12 +7,14 @@ import { MusiceventComponent } from './musicevent/musicevent.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { PriceRangePipe } from './price-range.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MusiceventComponent,
+    PriceRangePipe,
   ],
   imports: [
     BrowserModule,
