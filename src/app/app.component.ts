@@ -32,4 +32,9 @@ export class AppComponent {
   description: 'Lolapalooza is the best festival in the world',
   imageSrc: 'https://image.freepik.com/vrije-psd/decoratieve-gelukkige-de-groatachtergrond-van-het-holifestival_1017-17518.jpg'
 }];
+
+logName(value: string){
+  console.log(value);
+}
+
 }
