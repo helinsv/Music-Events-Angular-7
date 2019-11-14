@@ -7,3 +7,18 @@
         </ul>
     </div>
 </nav>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let event of events" class="col-6">
+            <img [src]="event.imageSrc" alt="Alt">
+            <div class="eventDataContainer">
+                <h1 [ngClass]="{redTitle: event.price > 40}">{{event.name}}</h1>
+                <p [ngStyle]="{'color': 'red'}">{{event.date | date}}</p>
+                <p>{{event.price }}</p>
+                <p>{{event.description}}</p>
+                <button mat-flat-button color="primary">Click me!</button>
+            </div>
+        </div>
+    </div>
+
+</div>
