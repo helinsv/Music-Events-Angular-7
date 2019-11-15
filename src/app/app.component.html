@@ -3,7 +3,8 @@
         <h2>MyApp</h2>
         <ul>
             <li>Add new item</li>
-            <li>Login</li>
+            <li *ngIf="!user">Login</li>
+            <li *ngIf="user">Loginout: {{user.username}}</li>
         </ul>
     </div>
 </nav>
