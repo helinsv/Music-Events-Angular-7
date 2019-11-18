@@ -2,8 +2,8 @@
     <div class="col-8 offset-2">
         <h2 [routerLink]="['home']">MyApp</h2>
         <ul>
-            <li>Add new item</li>
-            <li *ngIf="!user">Login</li>
+            <li [routerLink]="['event', 'add']">Add new item</li>
+            <li *ngIf="!user" [routerLink]="['login']">Login</li>
             <li *ngIf="user" (click)="Logout()">Logout: {{user.username}}</li>
         </ul>
     </div>

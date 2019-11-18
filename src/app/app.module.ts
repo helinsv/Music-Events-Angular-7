@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MusicEventListComponent } from './music-event-list/music-event-list.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddMusicEventComponent } from './add-music-event/add-music-event.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LoginComponent,
     MusicEventListComponent,
     NotFoundComponent,
+    AddMusicEventComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     FormsModule,
     RouterModule.forRoot([{
       path: 'home', component: MusicEventListComponent
+    }, {
+      path: 'login', component: LoginComponent
+    }, {
+      path: 'event/add', component: AddMusicEventComponent
     }, {
       path: '', redirectTo: 'home', pathMatch: 'full'
     }, {
