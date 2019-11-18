@@ -11,6 +11,9 @@ import { PriceRangePipe } from './price-range.pipe';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { MusicEventListComponent } from './music-event-list/music-event-list.component';
+import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     MusiceventComponent,
     PriceRangePipe,
     LoginComponent,
+    MusicEventListComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,15 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([{
+      path: 'home', component: MusicEventListComponent
+    }, {
+      path: '', redirectTo: 'home', pathMatch: 'full'
+    }, {
+      path: '**', component: NotFoundComponent
+    }
+  ])
   ],
   providers: [],
   bootstrap: [AppComponent]
