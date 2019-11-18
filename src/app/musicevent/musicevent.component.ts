@@ -9,21 +9,17 @@ import { MusicEvent } from '../MusicEvent';
 export class MusiceventComponent implements OnInit {
   currency = 'EUR';
   @Input() event: MusicEvent;
-  @Output() clickevent: EventEmitter<string> = new EventEmitter();
+  //@Output() clickevent: EventEmitter<string> = new EventEmitter();
 
   AddBang(value:string):string{
     return value + '!';
   }
 
-  emitToParent(){
-    this.clickevent.emit(this.event.name);
-  }
-
-  constructor() { }
-
-
-
   ngOnInit() {
   }
+
+  /*emitToParent(){
+    this.clickevent.emit(this.event.name);
+  }*/
 
 }

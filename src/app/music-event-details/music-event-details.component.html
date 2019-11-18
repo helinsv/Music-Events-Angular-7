@@ -1,0 +1,10 @@
+<mat-card>
+    <img [src]="event.imageSrc" alt="Alt">
+    <div class="eventDataContainer">
+        <h1>{{event.name}}</h1>
+        <p>{{event.date | date}}</p>
+        <p>{{event.price | currency: 'EUR'}}</p>
+        <p>{{event.description}}</p>
+    </div>
+    <button [routerLink]="['/event',event.id+1]">Next</button>
+</mat-card>

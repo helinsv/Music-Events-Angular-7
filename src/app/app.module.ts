@@ -15,6 +15,7 @@ import { MusicEventListComponent } from './music-event-list/music-event-list.com
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddMusicEventComponent } from './add-music-event/add-music-event.component';
+import { MusicEventDetailsComponent } from './music-event-details/music-event-details.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AddMusicEventComponent } from './add-music-event/add-music-event.compon
     MusicEventListComponent,
     NotFoundComponent,
     AddMusicEventComponent,
+    MusicEventDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,8 @@ import { AddMusicEventComponent } from './add-music-event/add-music-event.compon
       path: 'login', component: LoginComponent
     }, {
       path: 'event/add', component: AddMusicEventComponent
+    }, {
+      path: 'event/:id', component: MusicEventDetailsComponent
     }, {
       path: '', redirectTo: 'home', pathMatch: 'full'
     }, {

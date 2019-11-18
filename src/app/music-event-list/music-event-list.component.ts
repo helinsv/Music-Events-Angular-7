@@ -18,8 +18,5 @@ export class MusicEventListComponent implements OnInit {
     this.musicevents = this.musicEventService.GetMusicEvents();
   }
 
-  logName(value: string) {
-    console.log(value);
-  }
 
 }
