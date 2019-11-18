@@ -4,7 +4,7 @@
         <ul>
             <li>Add new item</li>
             <li *ngIf="!user">Login</li>
-            <li *ngIf="user">Loginout: {{user.username}}</li>
+            <li *ngIf="user" (click)="Logout()">Logout: {{user.username}}</li>
         </ul>
     </div>
 </nav>
