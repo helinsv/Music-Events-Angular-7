@@ -1,1 +1,26 @@
-<p>add-music-event works!</p>
+<mat-card class="col-8-offdet-2">
+    <h2>Add a new Event</h2>
+    <form [formGroup]="musicEventForm">
+        <mat-form-field>
+            <input placeholder="Name *" matInput formControlName="Name">
+        </mat-form-field>
+        <span *ngIf="musicEventForm.get('Name').touched && musicEventForm.get('Name').errors">Please enter a name of at least 3 characters</span>
+        <mat-form-field>
+            <input placeholder="Price *" matInput type="number" formControlName="Price">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Date *" formControlName="Date">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Image url" formControlName="ImageUrl">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Description *" formControlName="Description">
+        </mat-form-field>
+        <div class="buttonContainer">
+            <button mat-flat-button color="primary" [disabled]="!musicEventForm.valid" (click)="Save()">Add events</button>
+            <button mat-flat-button (click)="Cancel()">Cancel</button>
+        </div>
+    </form>
+    {{musicEventForm.value |json }} {{'valid:' + musicEventForm.valid}} {{'dirty:' + musicEventForm.dirty}}
+</mat-card>
